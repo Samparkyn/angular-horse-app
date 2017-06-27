@@ -1,0 +1,7 @@
+<h3>Top Horses</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let horse of horses"  [routerLink]="['/detail', horse.id]"  class="col-1-4"></a>
+    <div class="module horse">
+      <h4 [(ngModel)]="horse.name"></h4>
+    </div>
+  </div>

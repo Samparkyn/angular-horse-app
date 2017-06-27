@@ -1,0 +1,16 @@
+
+<div *ngIf="horse">
+  <h2>{{horse.name}} details!</h2>
+  <div>
+    <label>id: </label>{{horse.id}}
+  <div>
+    <label>name: </label>
+    <input [(ngModel)]="horse.name" placeholder="name" />
+    <div><label>Coat: </label>
+      <input [(ngModel)]="horse.coat" placeholder="coat" />
+    <div><label>Age: </label>
+      <input [(ngModel)]="horse.age" placeholder="age" />
+  </div>
+  <button (click)="goBack()">Back</button>
+</div>
+</div>

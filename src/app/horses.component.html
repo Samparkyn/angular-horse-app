@@ -1,0 +1,12 @@
+<h2>My Horses</h2>
+<ul class="horses">
+  <li *ngFor="let horse of horses" (click)="onSelect(horse)" [class.selected]="horse === selectedHorse">
+    <span class="badge">{{horse.id}}</span> {{horse.name}}
+  </li>
+</ul>
+<div *ngIf="selectedHorse">
+  <h2>
+    Horse: {{selectedHorse.name | uppercase}}
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+</div>
